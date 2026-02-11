@@ -314,8 +314,61 @@ body {
 }
 
 /* ============ QUESTION PAGE STYLES ============ */
+#questionPage {
+    background: #ffffff;
+    overflow: hidden;
+}
+
+/* Floating emojis container for question page */
+.question-emojis {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Floating emojis for question page */
+.question-emoji {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.6;
+    animation: floatUpQuestion 8s ease-in infinite;
+    pointer-events: none;
+}
+
+@keyframes floatUpQuestion {
+    0% {
+        transform: translateY(100vh) rotate(0deg) scale(0.5);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg) scale(1);
+        opacity: 0;
+    }
+}
+
 .bear-container {
+    z-index: 2;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bear-container .tenor-gif-embed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bear-gif {
@@ -331,9 +384,10 @@ body {
 }
 
 .question {
+    z-index: 2;
     font-family: 'Caveat', cursive;
     font-size: 3rem;
-    color: #ff6b6b;
+    color: #e91e63;
     margin-bottom: 40px;
     animation: pulse 2s ease-in-out infinite;
 }
@@ -347,6 +401,7 @@ body {
 .buttons-container {
     display: flex;
     gap: 30px;
+    z-index: 2;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -388,7 +443,7 @@ body {
 .hint {
     margin-top: 30px;
     font-size: 1.1rem;
-    color: #ff8e8e;
+    color: #e91e63;
     font-style: italic;
     min-height: 30px;
     font-family: 'Caveat', cursive;
@@ -396,19 +451,30 @@ body {
 
 /* ============ SUCCESS PAGE STYLES ============ */
 #successPage {
-    background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+    background: #ffffff;
 }
 
 .success-content {
     text-align: center;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-content .tenor-gif-embed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .success-title {
     font-family: 'Caveat', cursive;
     font-size: 4rem;
-    color: white;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    color: #e91e63;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     animation: bounceIn 0.8s ease-out;
 }
@@ -424,14 +490,14 @@ body {
 .success-text {
     font-family: 'Caveat', cursive;
     font-size: 2.5rem;
-    color: white;
+    color: #e91e63;
     margin-bottom: 10px;
     animation: bounceIn 0.8s ease-out 0.4s backwards;
 }
 
 .success-subtitle {
     font-size: 1.3rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: #555;
     margin-bottom: 20px;
     animation: bounceIn 0.8s ease-out 0.6s backwards;
 }
@@ -439,18 +505,18 @@ body {
 .love-text {
     font-family: 'Caveat', cursive;
     font-size: 3rem;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: #e91e63;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     animation: heartbeat 1.5s ease-in-out infinite, bounceIn 0.8s ease-out 0.8s backwards;
 }
 
 .date-text {
     font-family: 'Caveat', cursive;
     font-size: 1.8rem;
-    color: white;
+    color: #555;
     margin-top: 25px;
     line-height: 1.6;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
     animation: bounceIn 0.8s ease-out 1s backwards;
 }
 
