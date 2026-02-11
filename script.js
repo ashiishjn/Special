@@ -324,4 +324,25 @@ function createCelebration() {
 
 // ============ INITIALIZE ============
 createFloatingHearts();
+createQuestionPageEmojis();
 startPageSequence();
+
+// Create floating emojis for question page
+function createQuestionPageEmojis() {
+    const questionEmojis = document.getElementById('questionEmojis');
+    const hearts = ['❤️', '💕', '💖', '💗', '💓', '💝', '💘', '🩷'];
+    
+    setInterval(() => {
+        if (currentPage === 10) { // Only create when on question page
+            const heart = document.createElement('div');
+            heart.className = 'question-emoji';
+            heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+            heart.style.animationDuration = (Math.random() * 4 + 5) + 's';
+            questionEmojis.appendChild(heart);
+            
+            setTimeout(() => heart.remove(), 9000);
+        }
+    }, 200);
+}
