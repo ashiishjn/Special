@@ -22,8 +22,7 @@ const pageTimings = [
     2000,  // Page 7: Because
     4000,  // Page 8: You are special :)
     2000,  // Page 9: So
-    3500,  // Page 10: Emoji rain
-    3000,  // Page 11: I am finally asking
+    3000,  // Page 10: I am finally asking
 ];
 
 // Text to type on page 3
@@ -69,7 +68,7 @@ function showPage(index) {
         handlePageActions(index);
         
         // Auto advance to next page (except for question and success pages)
-        if (index < 11 && pageTimings[index]) {
+        if (index < 10 && pageTimings[index]) {
             setTimeout(() => {
                 showPage(index + 1);
             }, pageTimings[index]);
@@ -82,11 +81,6 @@ function handlePageActions(index) {
     // Page 3: Start typing animation
     if (index === 2) {
         startTypingAnimation();
-    }
-    
-    // Page 10: Start emoji rain
-    if (index === 9) {
-        startEmojiRain();
     }
 }
 
@@ -221,7 +215,7 @@ const noButtonTexts = [
 
 // Yes button click handler
 yesBtn.addEventListener('click', () => {
-    showPage(12); // Show success page
+    showPage(11); // Show success page (index 11)
     createCelebration();
     setInterval(createCelebration, 500);
 });
