@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 For You 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Page 1: Hey Surthi -->
+    <div class="page active" id="page1">
+        <h1 class="page1-title">Hey Surthi</h1>
+        <div class="heart-emoji">❤️</div>
+        <p class="page1-subtitle">So... is it too early to say you're my favourite human?</p>
+    </div>
+
+    <!-- Page 2: It's Valentine -->
+    <div class="page" id="page2">
+        <h1 class="page2-title">It's Valentine's Day!!!</h1>
+    </div>
+
+    <!-- Page 3: Will you be my Valentine (typing) -->
+    <div class="page" id="page3">
+        <div class="typing-box">
+            <p class="typing-text" id="typingText"></p>
+            <span class="cursor">|</span>
+        </div>
+    </div>
+
+    <!-- Page 4: That's what I was going to do -->
+    <div class="page" id="page4">
+        <h1 class="simple-text">That's what I was going to ask...</h1>
+    </div>
+
+    <!-- Page 5: But then I stopped -->
+    <div class="page" id="page5">
+        <h1 class="simple-text">But then I stopped.</h1>
+    </div>
+
+    <!-- Page 6: I realised -->
+    <div class="page" id="page6">
+        <h1 class="simple-text">I realized I wanted to do something special.</h1>
+    </div>
+
+    <!-- Page 7: Because -->
+    <div class="page" id="page7">
+        <h1 class="simple-text">Because...</h1>
+    </div>
+
+    <!-- Page 8: You are special with rotating smiley -->
+    <div class="page" id="page8">
+        <h1 class="special-text">You are special <span class="rotating-quote">'</span><span class="rotating-smiley">:</span><span class="rotating-quote">)</span></h1>
+    </div>
+
+    <!-- Page 9: So -->
+    <div class="page" id="page9">
+        <h1 class="simple-text">So...</h1>
+    </div>
+
+    <!-- Page 10: Emojis floating -->
+    <div class="page" id="page10">
+        <div class="emoji-rain" id="emojiRain"></div>
+    </div>
+
+    <!-- Page 11: I am finally asking -->
+    <div class="page" id="page11">
+        <h1 class="simple-text">I am finally asking...</h1>
+    </div>
+
+    <!-- Valentine Question Page -->
+    <div class="page" id="questionPage">
+        <div class="bear-container">
+            <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-love.gif" alt="Cute Bear" class="bear-gif">
+        </div>
+        <h2 class="question">Will you be my Valentine? 💝</h2>
+        
+        <div class="buttons-container">
+            <button class="btn btn-yes" id="yesBtn">Yes! 💕</button>
+            <button class="btn btn-no" id="noBtn">No 😢</button>
+        </div>
+        
+        <p class="hint" id="hint"></p>
+    </div>
+
+    <!-- Success Screen -->
+    <div class="page" id="successPage">
+        <div class="success-content">
+            <h1 class="success-title">Yayyy! 🎉💕</h1>
+            <img src="https://media.tenor.com/tFrFwMSiPHYAAAAi/love-bear.gif" alt="Happy Bear" class="success-gif">
+            <h2 class="success-text">I knew you'd say yes! 😍</h2>
+            <p class="success-subtitle">You just made me the happiest person ever!</p>
+            <p class="love-text">I love you! ❤️</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
